@@ -54,8 +54,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-   tests:
+  tests:
     runs-on: self-hosted
+    needs: compile
 
     steps:
       - name: Checkout Code
